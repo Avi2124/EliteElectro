@@ -9,6 +9,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f6fa;
   color: #101828;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
 }
 
 /* TOP BAR */
@@ -1014,12 +1019,15 @@ body {
     padding: 0 2%;
   }
 
-  .top-bar-left {
-    gap: 15px;
+  .top-bar-left,
+  .top-bar-right {
+    gap: 12px;
   }
 
-  .top-bar-right {
-    gap: 15px;
+  .top-bar-left span,
+  .top-bar-right span,
+  .top-bar a {
+    font-size: 11px;
   }
 
   .header-container {
@@ -1030,20 +1038,19 @@ body {
   }
 
   .logo {
-    width: 180px;
+    width: 165px;
   }
 
   .logo img {
-    width: 150px;
+    width: 145px;
   }
 
   .search-area {
     max-width: 500px;
-    /* gap: 15px; */
   }
 
   .header-action {
-    min-width: 48px;
+    min-width: 45px;
   }
 
   .action-icon {
@@ -1055,21 +1062,15 @@ body {
   }
 
   .navigation-container {
-    gap: 25px;
+    width: 94%;
+    gap: 22px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
   }
 
   .category-list {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .hero-container {
-    height: 400px;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   .deal-list,
@@ -1089,6 +1090,12 @@ body {
   .deal-image,
   .product-image {
     height: 190px;
+  }
+
+  .deal-image img, 
+  .product-image img {
+    max-width: 82%;
+    max-height: 82%;
   }
 
   .benefit-list {
@@ -1121,8 +1128,8 @@ body {
 @media (max-width: 600px) {
   .top-bar {
     display: flex;
-    flex-direction: column;
     min-height: 28px;
+    flex-direction: column;
     padding: 5px 12px;
     font-size: 9px;
     align-items: center;
@@ -1153,16 +1160,13 @@ body {
   .header-container {
     width: 100%;
     min-height: auto;
-    padding: 12px 14px 4px;
+    padding: 10px 14px;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas:
       "logo actions"
       "search search";
-    gap: 1px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: initial;
+    gap: 10px;
   }
 
   .logo {
@@ -1175,6 +1179,7 @@ body {
   .logo img {
     width: 123px;
     height: auto;
+    display: block;
   }
 
   .header-actions {
@@ -1182,11 +1187,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 2px;
+    gap: 5px;
   }
 
   .header-action {
     min-height: 38px;
+    min-width: 42px;
   }
 
   .action-icon {
@@ -1204,7 +1210,7 @@ body {
     width: 14px;
     height: 14px;
     top: -4px;
-    right: -3;
+    right: -3px;
     font-size: 7px;
   }
 
@@ -1218,20 +1224,23 @@ body {
   }
 
   .category-select {
-    width: 118px;
+    width: 110px;
     padding: 0 10px;
     font-size: 11px;
+    flex-shrink: 0;
   }
 
   .search-area input {
     min-width: 0;
+    flex: 1;
     padding: 0 10px;
     font-size: 11px;
   }
 
   .search-button {
-    width: 45px;
-    font-size: 15px;
+    width: 44px;
+    flex-shrink: 0;
+    font-size: 14px;
   }
 
   .navigation {
@@ -1377,7 +1386,8 @@ body {
     gap: 10px;
   }
 
-  .deal-image {
+  .deal-image,
+  .product-image {
     height: 145px;
   }
 
@@ -1396,7 +1406,8 @@ body {
     font-size: 11px;
   }
 
-  .deal-image img {
+  .deal-image img,
+  .product-image img {
     width: 78%;
     height: 78%;
   }
@@ -1472,7 +1483,7 @@ body {
 
   .benefit-list {
     grid-template-columns: 1fr;
-    gap: 4px;
+    gap: 10px;
   }
 
   .benefit-card {
@@ -1492,11 +1503,11 @@ body {
     font-size: 12px;
   }
 
-  .review.prev {
+  .review-prev {
     left: -8px;
   }
 
-  .review.next {
+  .review-next {
     right: -8px;
   }
 
@@ -1509,8 +1520,8 @@ body {
 
   .newsletter-form input {
     width: 100%;
-    padding: 11px 12px;
-    font-size: 12px;
+    padding: 10px 12px;
+    font-size: 11px;
   }
 
   .newsletter-form button {
@@ -1554,7 +1565,7 @@ body {
 @media (max-width: 400px) {
   .top-bar-left,
   .top-bar-right {
-    gap: 7px;
+    gap: 6px;
   }
 
   .top-bar-left span,
@@ -1567,12 +1578,12 @@ body {
   }
 
   .logo img {
-    width: 112px;
+    width: 108px;
     height: auto;
   }
 
   .header-actions {
-    gap: 2px;
+    gap: 3px;
   }
 
   .header-action {
@@ -1588,7 +1599,7 @@ body {
   }
 
   .category-select {
-    width: 98px;
+    width: 92px;
     font-size: 9px;
   }
 
@@ -1597,7 +1608,7 @@ body {
   }
 
   .navigation-container {
-    gap: 11px;
+    gap: 12px;
     padding: 0 12px;
   }
 
@@ -1665,6 +1676,10 @@ body {
 
   .newsletter-container {
     padding: 12px 12px;
+  }
+
+  .newsletter-header h2 {
+    font-size: 12px;
   }
 
   .newsletter-header p {
