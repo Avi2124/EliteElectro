@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f6fa;
@@ -264,6 +268,7 @@ img {
 }
 
 .hero-container {
+  position: relative;
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
@@ -880,7 +885,7 @@ img {
 }
 
 .newsletter-form button:hover {
-  background: #1f2937;
+  background: #0f4fd4;
 }
 
 /* Footer */
@@ -1092,7 +1097,7 @@ img {
     height: 190px;
   }
 
-  .deal-image img, 
+  .deal-image img,
   .product-image img {
     max-width: 82%;
     max-height: 82%;
