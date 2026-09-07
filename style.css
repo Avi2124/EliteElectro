@@ -424,13 +424,15 @@ body {
   overflow: hidden;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .deal-card:hover,
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.10);
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.1);
 }
 
 .deal-image,
@@ -497,7 +499,7 @@ body {
 
 .deal-info,
 .product-info,
-.product-info-new{
+.product-info-new {
   padding: 14px;
 }
 
@@ -605,7 +607,7 @@ body {
   color: #111827;
 }
 
-.benefits-section .section-heading p{
+.benefits-section .section-heading p {
   margin: 0;
   color: #6b7280;
   font-size: 12px;
@@ -688,16 +690,16 @@ body {
 /* Customer Review */
 
 .reviews-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .reviews-list {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .review-card {
@@ -729,7 +731,7 @@ body {
   margin-bottom: 8px;
 }
 
-.review-rating i{
+.review-rating i {
   color: #f59e0b;
   font-size: 13px;
 }
@@ -952,7 +954,7 @@ body {
     font-size: 11px;
     min-height: 31px;
     margin-bottom: 5px;
-   }
+  }
 
   .deal-image,
   .product-image {
@@ -971,13 +973,12 @@ body {
     padding: 12px 35px;
   }
   .newsletter-header h2 {
-      font-size: 18px;
+    font-size: 18px;
   }
   .newsletter-header p {
-      font-size: 12px;
+    font-size: 12px;
   }
 }
-
 
 /* Mobile - 600 */
 @media (max-width: 600px) {
@@ -1018,9 +1019,9 @@ body {
     padding: 12px 14px 4px;
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-areas: 
-    "logo actions"
-    "search search";
+    grid-template-areas:
+      "logo actions"
+      "search search";
     gap: 1px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1120,19 +1121,19 @@ body {
   }
 
   .category-select-1 {
-  width: auto;
-  border: none;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 9px;
-  cursor: pointer;
-  font-weight: 600;
-  text-align: center;
-}
+    width: auto;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 9px;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+  }
 
-.category-select-1 option {
-  background-color: #050d20;
-}
+  .category-select-1 option {
+    background-color: #050d20;
+  }
 
   .hero {
     width: 100%;
@@ -1220,7 +1221,7 @@ body {
     width: 92%;
   }
 
-  .flash-header{
+  .flash-header {
     margin-bottom: 14px;
   }
 
@@ -1232,7 +1233,9 @@ body {
     font-size: 10px;
   }
 
-  .deal-list, .product-list, .new-arrivals-list {
+  .deal-list,
+  .product-list,
+  .new-arrivals-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
@@ -1324,7 +1327,7 @@ body {
   .benefit-content h3 {
     margin: 0 0 3px;
     font-size: 14px;
-   }
+  }
 
   .benefit-content p {
     font-size: 12px;
@@ -1339,7 +1342,7 @@ body {
     padding: 18px 15px;
   }
 
-  .reviews-list{
+  .reviews-list {
     grid-template-columns: 1fr;
   }
 
@@ -1361,52 +1364,27 @@ body {
   }
 
   .newsletter-header h2 {
-        font-size: 14px;
-    }
-    .newsletter-header p {
-        font-size: 8px;
-        /* margin-bottom: 20px; */
-    }
+    font-size: 13px;
+  }
+  .newsletter-header p {
+    font-size: 8px;
+  }
 
+  .newsletter-form input {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 12px;
+  }
 
+  .newsletter-form button {
+    width: 33%;
+    font-size: 10px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
-
-/* ================================
-   MOBILE
-================================ */
-/* @media (max-width: 600px) {
-    .newsletter-section {
-        padding: 40px 15px;
-    }
-    .newsletter-container {
-        padding: 35px 18px;
-        border-radius: 10px;
-    }
-    .newsletter-content h2 {
-        font-size: 23px;
-    }
-    .newsletter-content p {
-        font-size: 13px;
-        margin-bottom: 20px;
-    }
-    .newsletter-form {
-        flex-direction: column;
-        gap: 8px;
-        padding: 8px;
-        background: #ffffff;
-    }
-    .newsletter-form input {
-        width: 100%;
-        padding: 11px 12px;
-    }
-    .newsletter-form button {
-        width: 100%;
-        padding: 11px;
-    }
-    .newsletter-note {
-        font-size: 10px;
-    }
-} */
 
 /* Mobile - 400 */
 @media (max-width: 400px) {
@@ -1446,8 +1424,8 @@ body {
   }
 
   .category-select {
-     width: 98px;
-     font-size: 9px;
+    width: 98px;
+    font-size: 9px;
   }
 
   .search-area input {
@@ -1461,7 +1439,7 @@ body {
 
   .category-card {
     min-height: 85px;
-    padding: 8px; 
+    padding: 8px;
   }
 
   .category-image {
@@ -1469,13 +1447,13 @@ body {
     height: 44px;
   }
 
-  .category-info h3{
+  .category-info h3 {
     font-size: 10px;
   }
 
   .category-info p {
     font-size: 8px;
-  } 
+  }
 
   .deal-info h3 {
     font-size: 11px;
@@ -1488,7 +1466,7 @@ body {
     padding-top: 1px;
   }
 
-    .benefits-section {
+  .benefits-section {
     padding: 12px 10px;
   }
 
@@ -1519,5 +1497,14 @@ body {
 
   .benefit-card {
     padding: 14px 11px;
+  }
+
+    .newsletter-container {
+  padding: 12px 12px;
+}
+
+  .newsletter-header p {
+    font-size: 8px;
+    line-height: 1.3;
   }
 }
